@@ -1,108 +1,60 @@
-// 1. Importar Express
 const express = require('express');
-
-//2. Criar aplicação
 const app = express();
-
-//3. Definir porta
 const PORT = 3000;
-
-//4.Middleware para JSON
 app.use(express.json());
 
-//5. Criar o primeiro endpoint
-app.get('/', (req, res)=>{
-    res.json({
-        mensagem: '🎉 Minha primeira API funcionando!',
-        status:'sucesso',
-        timestamp: new Date().toISOString()
-    })
-})
 
-//6. Endpoint de informações
-app.get('/info', (req, res)=>{
-    res.json({
-        name:'Minha API REST',
-        versao:'1.0.0',
-        autor:'Andrey Marucci Alves'
-    })
-})
-
-//7. Iniciar servidor
-app.listen(PORT, () =>{
-    console.log(`👀Minha primeira API funcionando na porta ${PORT}`)
-})
-
-app.get('/kenzoLima', (req, res)=>{
-    res.json({
-        mensagem: 'Kenzo é viado',
-        status:'verdadeiro'
-    })
-})
-
-app.get('/info/jhosefy', (req, res)=>{
-    res.json({
-        name:'Mano Jhosefy',
-        versao:'69.69.69',
-        autor: 'Jhosefy'
-    })
-})
-
-
-//Aula de post
-let produtos = [];
+let livros = [];
 let proximoId = 0;
-app.post('/api/produtos', (req, res) => {
-    // 1. Extrair dados do body
+
+//Post
+
+app.post('/api/livros', (req, res) => {
+
     const { nome, preco, categoria } = req.body;
     
-    // 2. VALIDAÇÕES - Campos obrigatórios
+    //Validando se os campos estão preenchidos
     if (!nome || !preco || !categoria) {
-        return res.status(400).json({
-            erro: "Campos obrigatórios: nome, preco, categoria"
-        });
+        return res.status(400).json({ erro: "Campos obrigatórios: nome, preco, categoria" });
+    }
+
+    //Validação do campo nome
+    if (typeof nome !== 'string' || nome.trim().length < 3){
+        return res.status(400).json({ erro: "O nome precisa ser uma string e ter pelomenos 3 caracteres" })
+    }
+
+    //Validação do campo preco com regra de negócio
+    if (typeof preco !== 'number' || preco <=0) {
+        return res.status(400).json({ erro: "Preço deve ser um número maior que 0" });
     }
     
-    // 3. VALIDAÇÕES - Tipo de dado
-    if (typeof preco !== 'number') {
-        return res.status(400).json({
-            erro: "Preço deve ser um número"
-        });
+    //Validacao do campo categoria
+    if (typeof categoria !== 'string' || categoria.length < 3) {
+        return res.status(400).json({ erro: "O nome da categoria precisa ter pelomenos 3 caracteres" })
     }
     
-    // 4. VALIDAÇÕES - Regra de negócio (preço positivo)
-    if (preco <= 0) {
-        return res.status(400).json({
-            erro: "Preço deve ser maior que zero"
-        });
+    //Validando se o livro já está cadastrado. Utilizando uma função lambda para procurar no armazenamento em memória
+    const livroJaExiste = livros.some(livro => livro.nome.toLowerCase() == nome.toLocaleLowerCase());
+
+    if(livroJaExiste){
+        return res.status(409).json({ erro: "Esse livro já está cadastrado." })
     }
-    
-    // 5. VALIDAÇÕES - Tamanho mínimo
-    if (nome.length < 3) {
-        return res.status(400).json({
-            erro: "Nome deve ter pelo menos 3 caracteres"
-        });
-    }
-    
-    // 6. Se passou em TODAS as validações, criar produto
-    const novoProduto = {
+
+    const novoLivro = {
         id: proximoId++,
-        nome,
+        nome: nome.trim(),
         preco,
-        categoria
+        categoria: categoria.trim()
     };
     
-    // 7. Adicionar ao array
-    produtos.push(novoProduto);
+    livros.push(novoLivro);
     
-    // 8. Retornar sucesso com 201 Created
-    res.status(201).json(novoProduto);
+    res.status(201).json(novoLivro);
 });
-// GET produtos
 
-app.get('/api/produtos', (req, res) => {
-    // Retorna o array completo
-    res.json(produtos);
+//Get
+app.get('/api/livros', (req, res) => {
+    res.json(livros);
 });
 
 app.listen(3000, () => console.log('API na porta 3000'));
