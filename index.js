@@ -57,4 +57,4 @@ app.get('/api/livros', (req, res) => {
     res.json(livros);
 });
 
-app.listen(3000, () => console.log('API na porta 3000'));
+app.listen(PORT, () => console.log('API na porta 3000'));
