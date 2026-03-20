@@ -30,7 +30,7 @@ app.post('/api/livros', (req, res) => {
     
     //Validacao do campo categoria
     if (typeof categoria !== 'string' || categoria.length < 3) {
-        return res.status(400).json({ erro: "O nome da categoria precisa ter pelomenos 3 caracteres" })
+        return res.status(400).json({ erro: "O nome da categoria precisa ser uma string e ter pelomenos 3 caracteres" })
     }
     
     //Validando se o livro já está cadastrado. Utilizando uma função lambda para procurar no armazenamento em memória
