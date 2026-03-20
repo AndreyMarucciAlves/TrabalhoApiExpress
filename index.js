@@ -5,7 +5,7 @@ app.use(express.json());
 
 
 let livros = [];
-let proximoId = 0;
+let proximoId = 1;
 
 //Post
 
