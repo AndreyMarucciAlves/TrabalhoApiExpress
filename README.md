@@ -85,11 +85,11 @@ Abaixo, os exemplos de requisições realizadas para validar o funcionamento.
 * **Print 01: Cadastro com Sucesso (Status 201)**
     * ![Cadastro com Sucesso](https://github.com/user-attachments/assets/b98d78a7-7ff1-4260-bbbf-122b635d93ed)
 * **Print 02: Erro de Validação de Preço (Status 400)**
-    * `<img width="1066" height="600" alt="image" src="https://github.com/user-attachments/assets/ea1cd0e9-6deb-4e49-9860-c33f04d71c6e" />`
+    * ![Erro de Validação de Preço](https://github.com/user-attachments/assets/ea1cd0e9-6deb-4e49-9860-c33f04d71c6e)
 * **Print 03: Erro de Livro já Cadastrado (Status 409)**
-    *`<img width="1057" height="595" alt="image" src="https://github.com/user-attachments/assets/afa76709-c3a3-4d50-a825-c4018c65525f" />` 
+    * ![Livro já está cadastrado](https://github.com/user-attachments/assets/afa76709-c3a3-4d50-a825-c4018c65525f) 
 * **Print 04: Listagem Geral (Status 200)**
-    * `<img width="1539" height="981" alt="image" src="https://github.com/user-attachments/assets/233902b2-2fea-4221-81e9-947da70399cc" />`
+    * ![Lista de livros cadastrados](https://github.com/user-attachments/assets/233902b2-2fea-4221-81e9-947da70399cc)
 
 ---
 
