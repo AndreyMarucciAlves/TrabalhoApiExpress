@@ -83,13 +83,13 @@ Abaixo, os exemplos de requisições realizadas para validar o funcionamento.
 
 
 * **Print 01: Cadastro com Sucesso (Status 201)**
-    * ![Cadastro com Sucesso](Imagem1.png)
+    * ![Cadastro com Sucesso](Imagens_Teste_Postman/Imagem1.png)
 * **Print 02: Erro de Validação de Preço (Status 400)**
-    * ![Erro de Validação de Preço](Imagem2.png)
+    * ![Erro de Validação de Preço](Imagens_Teste_Postman/Imagem2.png)
 * **Print 03: Erro de Livro já Cadastrado (Status 409)**
-    * ![Livro já está cadastrado](Imagem3.png) 
+    * ![Livro já está cadastrado](Imagens_Teste_Postman/Imagem3.png) 
 * **Print 04: Listagem Geral (Status 200)**
-    * ![Lista de livros cadastrados](Imagem4.png)
+    * ![Lista de livros cadastrados](Imagens_Teste_Postman/Imagem4.png)
 
 ---
 
