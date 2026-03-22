@@ -90,7 +90,8 @@ Abaixo, os exemplos de requisições realizadas para validar o funcionamento.
     * ![Livro já está cadastrado](Imagens_Teste_Postman/Imagem3.png) 
 * **Print 04: Listagem Geral (Status 200)**
     * ![Lista de livros cadastrados](Imagens_Teste_Postman/Imagem4.png)
-
+* **Print 05: Erro de tipagem das variáveis (Status 400)**
+    * ![O Preço precisa ser um número](Imagens_Teste_Postman/Imagem5.png)
 ---
 
 ## 📂 Recursos Criados (Massa de Dados)
