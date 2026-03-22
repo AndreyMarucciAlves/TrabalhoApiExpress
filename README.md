@@ -83,13 +83,13 @@ Abaixo, os exemplos de requisições realizadas para validar o funcionamento.
 
 
 * **Print 01: Cadastro com Sucesso (Status 201)**
-    * ![Cadastro com Sucesso](https://github.com/user-attachments/assets/b98d78a7-7ff1-4260-bbbf-122b635d93ed)
+    * ![Cadastro com Sucesso](Imagem1.png)
 * **Print 02: Erro de Validação de Preço (Status 400)**
-    * ![Erro de Validação de Preço](https://github.com/user-attachments/assets/ea1cd0e9-6deb-4e49-9860-c33f04d71c6e)
+    * ![Erro de Validação de Preço](Imagem2.png)
 * **Print 03: Erro de Livro já Cadastrado (Status 409)**
-    * ![Livro já está cadastrado](https://github.com/user-attachments/assets/afa76709-c3a3-4d50-a825-c4018c65525f) 
+    * ![Livro já está cadastrado](Imagem3.png) 
 * **Print 04: Listagem Geral (Status 200)**
-    * ![Lista de livros cadastrados](https://github.com/user-attachments/assets/233902b2-2fea-4221-81e9-947da70399cc)
+    * ![Lista de livros cadastrados](Imagem4.png)
 
 ---
 
@@ -106,5 +106,5 @@ Conforme solicitado, foram criados os seguintes recursos iniciais para teste da 
 ---
 
 ## 📝 Entrega
-* **Data:** 20/03/2026
-* **Arquivos:** `index.js`, `package.json`, `README.md`, `Trabalho1_Collection.postman_collection.json`.
+* **Data:** 23/03/2026
+* **Arquivos:** `index.js`, `package.json`, `README.md`, `Imagens_Teste_Postman`,`Trabalho1_Collection.postman_collection.json`.
