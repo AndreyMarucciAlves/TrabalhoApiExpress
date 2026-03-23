@@ -1,6 +1,6 @@
 # 📚 API de Catálogo de Livros - Trabalho 1
 
-Este projeto é uma API RESTful desenvolvida para o **Trabalho 1** da disciplina. O objetivo é gerenciar um catálogo de livros, permitindo o cadastro (POST) e a listagem (GET) com validações robustas.
+Este projeto é uma API RESTful desenvolvida para o **Trabalho 1** da disciplina Desenvolvimento de Aplicativos Móveis: Criação de API Rest Básica. O objetivo é gerenciar um catálogo de livros, permitindo o cadastro (POST) e a listagem (GET) com validações robustas.
 
 ---
 
